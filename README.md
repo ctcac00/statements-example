@@ -2,6 +2,8 @@
 
 See [App.java](./app/src/main/java/org/example/App.java) and [Statement.java](./app/src/main/java/org/example/Statement.java) for more details
 
+Update: I have added a new implementation of the Statement class that uses the Bucket Pattern. See [StatementV2.java](./app/src/main/java/org/example/StatementV2.java) for more details.
+
 ## Notes
 
 This example takes a simple approach to separate transactions inside a statement if they exceed a threshold (default is 10).
