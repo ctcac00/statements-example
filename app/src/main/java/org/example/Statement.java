@@ -71,12 +71,15 @@ public class Statement {
     this.transactions = transactions;
   }
 
-  public Statement() {
+  public void init() {
     Faker faker = new Faker();
     this.statementId = faker.idNumber().valid();
     this.accountNumber = faker.finance().iban();
     this.statementDate = faker.date().birthday().toString();
     this.statementPeriod = faker.date().past(30, java.util.concurrent.TimeUnit.DAYS).toString();
+  }
+
+  public Statement() {
   }
 
   // Method to save the standard statement to MongoDB

@@ -29,8 +29,8 @@ public class Transaction {
   private String transactionStatus;
   private String failureReason;
 
-  // Empty constructor
-  public Transaction() {
+  public void init() {
+
     Faker faker = new Faker();
     Random random = new Random();
 
@@ -57,6 +57,11 @@ public class Transaction {
     this.deviceType = faker.internet().domainWord();
     this.transactionStatus = faker.options().option("Success", "Failed", "Pending");
     this.failureReason = faker.lorem().sentence();
+
+  }
+
+  // Empty constructor
+  public Transaction() {
   }
 
   public Transaction(String transactionId, double amount, Date date, String description, String accountNumber,
